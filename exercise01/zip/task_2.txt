@@ -1,0 +1,49 @@
+`ssh`: connects to a remote ssh-host using the ssh protocol
+
+`pwd`: echos the path of the directory you are working in
+`ls`: lists all files in the current directory
+`cd`: changes the current directory to the provided path
+
+`touch`: creates a file with the provided name
+`mkdir`: creates a directory with the provided name
+
+`cp`: copies a file, multiple files or directories to a destination path
+`mv`: moves a file, multiple files or directories to a destination path
+
+`grep`: filters all lines in files matching one or multiple provided patterns
+
+`>`: redirects the output of a command to a provided file
+
+`|`: redirects the output of a command to another command taking a file(?) as input
+
+vim:
+press `i` to enter insert mode
+press `esc` to exit insert mode
+in default mode the cursor can be moved around using hjkl
+press `:` to open the command mode
+in command mode execute `w` to save a file or `q` to exit vim :)
+
+`history`: opens a small seperate page that shows the history of used commands with similar bindings to vim
+
+`cat`: outputs the contents of a file to the commandline
+
+`man`: opens a manual page for a command (or other things like c functions), again with similar bindings to vim
+
+`man intro`: lists basic linux commands and some basics about unix systems and how a sessions look
+
+`man man-pages`:
+man pages are split into 8 sections, each containing certain types of manuals
+each man page has a title line and some optionals sections like name or versions
+it also contains some guides on how to format and style man pages
+
+`man file-hierarchy`:
+lists the folders contained in the file system root and some special subfolders
+it also documents where applications should store and read data from in the home directory
+
+`man printf`: opens the manual page for the printf usercommand (provided by bash?)
+
+`man 3 printf`: opens the manual page for the printf c function
+
+`scp`:
+same as cp but allows to copy files per ssh
+remote host has to be addressed with <username>@<address>:<absolute-path>

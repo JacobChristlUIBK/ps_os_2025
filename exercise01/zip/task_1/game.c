@@ -7,16 +7,16 @@
 typedef struct field {
 	int width;
 	int height;
-	bool *data;
+	bool* data;
 } t_field;
 
 // initializes a new field.
-t_field *init_field(int width, int height) {
+t_field* init_field(int width, int height) {
 	if (width < 1 || height < 1) {
 		return NULL;
 	}
 
-	t_field *field = malloc(sizeof(*field));
+	t_field* field = malloc(sizeof(*field));
 	if (!field) {
 		return NULL;
 	}
@@ -33,13 +33,13 @@ t_field *init_field(int width, int height) {
 }
 
 // frees a field.
-void free_field(t_field *field) {
+void free_field(t_field* field) {
 	free(field->data);
 	free(field);
 }
 
 // populates a field according to density.
-void populate_field(t_field *field, double density) {
+void populate_field(t_field* field, double density) {
 	if (!field) {
 		return;
 	}
@@ -56,7 +56,7 @@ void populate_field(t_field *field, double density) {
 
 // gets the truth value at a given position on a field.
 // returns false if out of bounds or field is NULL.
-bool get_value_field(t_field *field, int x, int y) {
+bool get_value_field(t_field* field, int x, int y) {
 	if (!field) {
 		return false;
 	}
@@ -69,7 +69,7 @@ bool get_value_field(t_field *field, int x, int y) {
 }
 
 // sets the truth value at a given position on a field.
-void set_value_field(t_field *field, int x, int y, bool value) {
+void set_value_field(t_field* field, int x, int y, bool value) {
 	if (!field) {
 		return;
 	}
@@ -83,7 +83,7 @@ void set_value_field(t_field *field, int x, int y, bool value) {
 
 // counts the neighbours alive at a certain position on a field.
 // returns -1 if field is NULL.
-int alive_neighbours_field(t_field *field, int x, int y) {
+int alive_neighbours_field(t_field* field, int x, int y) {
 	if (!field) {
 		return -1;
 	}
@@ -101,7 +101,7 @@ int alive_neighbours_field(t_field *field, int x, int y) {
 
 // calculates the next step in the game of life.
 // does nothing if field or dest are NULL.
-void step_field(t_field *field, t_field *dest) {
+void step_field(t_field* field, t_field* dest) {
 	if (!field || !dest) {
 		return;
 	}
@@ -124,7 +124,7 @@ void step_field(t_field *field, t_field *dest) {
 	}
 }
 
-void write_field(t_field *field, int frame) {
+void write_field(t_field* field, int frame) {
 	if (!field) {
 		return;
 	}
@@ -132,7 +132,7 @@ void write_field(t_field *field, int frame) {
 	// open file
 	char *path = calloc(14, sizeof(*path));
 	sprintf(path, "gol_%05d.pbm", frame);
-	FILE *file = fopen(path, "w");
+	FILE* file = fopen(path, "w");
 	free(path);
 
 	fprintf(file, "P1\n%d %d", field->width, field->height);
@@ -149,11 +149,11 @@ void write_field(t_field *field, int frame) {
 	fclose(file);
 }
 
-void printUsage(const char *programName) {
+void printUsage(const char* programName) {
 	printf("usage: %s <width> <height> <density> <steps>\n", programName);
 }
 
-int main(int argc, char *argv[]) {
+int main(int argc, char* argv[]) {
 	if (argc != 5) {
 		printUsage(argv[0]);
 		return EXIT_FAILURE;

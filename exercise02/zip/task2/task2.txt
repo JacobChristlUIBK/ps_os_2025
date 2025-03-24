@@ -1,0 +1,32 @@
+Answer the following questions:
+- Which command did you use to set the permissions for 'task2.txt'?
+	`chmod 600 task2.txt`
+
+- Which command did you use to set the permissions for 'file.txt'?
+	`chmod 400 file.txt`
+
+- Explain how to read these permission strings (e.g. `rw-rw-r--`).
+	Following the pattern `ooogggaaa` where o is the file owner, g is users the files group and a is for all users.
+	r stands for read
+	w stands for write
+
+	This means that the file owner and the group they are in can read and write to and from the file. All other users can only read it.
+
+- How do these permission strings relate to octal permissions (e.g. `0644`)?
+	Each set of permissions (rwx) can be described by an octal digit since each permission can be either a set or unset bit.
+	r is the MSB and x the LSB, meaning a permission of 5 would mean the file could be read and executed.
+
+	For 0644 this means that the file can be read and written by the owner but only read by all other users.
+	The leading zero unsets the sticky bit.
+
+
+- What is the benefit of having 'groups' and 'others'?
+	To let other users access data but deny them write or even execution permissions.
+	eg. if i write to some file andi want other users to be able to read it, but not write to it.
+
+- In your opinion, what are the ideal permissions for ...
+  - ... a text file used to take private notes? 	600
+  - ... a shell script? 							744
+  - ... a config file that should not be edited? 	444
+
+Hand 'task2.txt' as your solution.

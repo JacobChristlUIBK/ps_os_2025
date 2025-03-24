@@ -1,0 +1,8 @@
+Passing arguments:
+
+./list_args hi "hello world" \"linux\" "'ps' \"os\"" "its week one \\ or is it?"
+
+
+Running command from txt file:
+
+eval "$(cat args.txt)"
