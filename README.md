@@ -15,6 +15,7 @@ Note that exercises associated with a given date are to be discussed on that day
 | 2025-03-12 | [1](exercise01/) | Self-assessment, ssh, commandline                     | Makefile slides   |
 | 2025-03-19 | [2](exercise02/) | Makefile, permissions, fork                           |                   |
 | 2025-03-26 | [3](exercise03/) | Signal, valgrind, pthreads                            |                   |
+| 2025-04-02 | [4](exercise04/) | Exit codes, pipes, fifos                              |                   |
 
 ## Coding Guidelines
 
