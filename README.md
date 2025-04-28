@@ -17,6 +17,7 @@ Note that exercises associated with a given date are to be discussed on that day
 | 2025-03-26 | [3](exercise03/) | Signal, valgrind, pthreads                            |                   |
 | 2025-04-02 | [4](exercise04/) | Exit codes, pipes, fifos                              |                   |
 | 2025-04-09 | [5](exercise05/) | Message queues, shared memory, synchronization	    |                   |
+| 2025-04-30 | [6](exercise06/) | Atomics, mutex, condition variables                   |                   |
 
 ## Coding Guidelines
 
