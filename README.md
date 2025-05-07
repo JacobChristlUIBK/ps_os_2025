@@ -19,6 +19,7 @@ Note that exercises associated with a given date are to be discussed on that day
 | 2025-04-09 | [5](exercise05/) | Message queues, shared memory, synchronization	    |                   |
 | 2025-04-30 | [6](exercise06/) | Atomics, mutex, condition variables                   |                   |
 | 2025-05-07 | [7](exercise07/) | Strace, deadlock, thread pool                         |                   |
+| 2025-05-14 | [8](exercise08/) | TCP sockets (chat)                                    |                   |
 
 ## Coding Guidelines
 
