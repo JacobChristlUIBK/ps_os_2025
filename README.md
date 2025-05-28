@@ -22,7 +22,7 @@ Note that exercises associated with a given date are to be discussed on that day
 | 2025-05-14 | [8](exercise08/) | TCP sockets (chat)                                    |                   |
 | 2025-05-21 | [9](exercise09/) | Mutex, Barrier                                        |                   |
 | 2025-05-28 | [10](exercise10/)| Custom allocators                                     |                   |
-| 2025-06-04 | 11               |                                                       |                   |
+| 2025-06-04 | [11](exercise11/)| Linking                                               |                   |
 | 2025-06-11 | 12               | Last year's test                                      | Bonus points      |
 | 2025-06-18 | -                |                                                       | Test              |
 | 2025-06-25 | -                |                                                       | Q&A, Feedback     |
