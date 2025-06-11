@@ -10,7 +10,7 @@ enum exit_codes {
 };
 
 int main(int argc, char* args[]) {
-	const char *var = "OFFSET";
+	const char* var = "OFFSET";
 	char* endptr;
 	char* offset_str = getenv(var);
 

@@ -1,10 +1,13 @@
 #include "pthread.h"
 #include "bits/pthreadtypes.h"
+#include <signal.h>
 #include <limits.h>
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+
+volatile sig_atomic_t sig;
 
 // Holds player data.
 typedef struct {

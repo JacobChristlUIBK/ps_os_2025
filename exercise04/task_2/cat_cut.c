@@ -1,9 +1,9 @@
 #include "sched.h"
 #include "sys/wait.h"
+#include <err.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include <err.h>
 
 int main(int argc, char* argv[]) {
 	if (argc != 3) {
@@ -35,7 +35,7 @@ int main(int argc, char* argv[]) {
 		printf("a");
 		fflush(stdout);
 
-		FILE *f = fdopen(pipefd[0], "r");
+		FILE* f = fdopen(pipefd[0], "r");
 
 		printf("%.*s\n", fget, buf);
 		fflush(stdout);
@@ -49,11 +49,11 @@ int main(int argc, char* argv[]) {
 			err(EXIT_FAILURE, "dup2");
 		}
 
-		if (close(pipefd[0]) == -1 || close(pipefd[1]) == -1 ) {
+		if (close(pipefd[0]) == -1 || close(pipefd[1]) == -1) {
 			err(EXIT_FAILURE, "close");
 		}
 
-		execl("cat", argv[1], argv[2], (char *) NULL);
+		execl("cat", argv[1], argv[2], (char*)NULL);
 
 		wait(NULL);
 		fprintf(stderr, "c");
